@@ -1,0 +1,88 @@
+/*This stylesheet contains the baseline layout for both pages*/
+
+.container{
+    display:grid;
+    grid-template-areas: 
+    "hd"
+    "sd"
+    "main"
+    "ft";
+    grid-template-rows: 140px 100px 1fr 100px;
+    grid-gap:15px;
+}
+
+.header{
+    grid-area:hd;
+  }
+
+  .sidebar{
+    grid-area: sd;
+    display:flex;
+    flex-direction:row;
+    justify-content:space-around;
+    align-items:center;
+    padding:0.15rem;
+  }
+
+  .sidebar_links{
+    display:flex;
+    flex-direction: column;
+  }
+
+
+  .content{
+    grid-area:main;
+    display:grid;
+    grid-gap:10px;
+  }
+
+  .footer{
+    grid-area: ft;
+    display:grid;
+    grid-template-rows:40px;
+    grid-template-areas:"social"
+    "credits";  
+    grid-gap:5px;
+  }
+
+  .social_bar{
+    grid-area:social;
+    display:flex;
+    flex-direction: row;
+    justify-content:space-evenly;
+    align-items:center;
+  }
+
+  .credits{
+    grid-area:credits;
+    display:flex;
+    flex-direction:row;
+    justify-content:space-evenly;
+  }
+
+
+    @media(min-width:900px){
+
+        .container{
+            grid-template-areas: 
+            "hd hd"
+            "sd main"
+            "ft ft";
+            grid-template-columns: 170px 1fr;
+            grid-template-rows: 150px 1fr 80px;
+        }
+      
+          .sidebar{
+            flex-direction:column;
+            justify-content:flex-start;
+            align-items:flex-start;
+          }
+
+          .footer{
+            grid-template-columns: 350px 1fr;
+            grid-template-rows:40px;
+            grid-template-areas:"social credits";
+
+          }
+
+        }

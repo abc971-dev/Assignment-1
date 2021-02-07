@@ -1,0 +1,58 @@
+/*This stylesheet applies to the blog post page*/
+
+@import'main_styles.css';
+@import'main_layout.css';
+
+
+.content{
+  grid-template-rows: 250px 300px 1fr;
+  grid-template-areas:"title"
+    "author"
+    "post_ct"
+    ;
+}
+
+.content > .title{
+  grid-area:title;
+  display:flex;
+  flex-direction: column;
+    }
+    
+     .hero_image{
+      background-image:url('../img/waterdrop.jpg');
+        background-position:45% 83%;
+        background-size:cover;
+        height:100px;
+      }
+    
+      .author_info{
+        grid-area:author;
+        display:flex;
+        flex-direction:row;
+        justify-content: space-between;
+        align-items:center;
+        
+      }
+
+       .author_info.profile_txt{
+        font-size:smaller;
+        margin-right:0.25rem;
+      }
+    
+      .author_info >img{height:180px;}
+    
+      .post_content{
+        grid-area: post_ct;
+      }
+
+  
+  @media(min-width:900px){
+    .content{
+      grid-template-rows: 300px 200px 1fr;
+    }
+
+  .hero_image{
+      height:200px;
+      background-position: 45% 82%;
+    }
+  }

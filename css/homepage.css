@@ -1,0 +1,94 @@
+/*This stylesheet applies to the homepage*/
+
+@import'main_styles.css';
+@import'main_layout.css';
+
+
+  .content{
+    grid-template-rows: 420px 1fr;
+    grid-template-areas:"featured_ct"
+      "thumbnail"
+      ;
+  }
+
+.content > .featured{
+grid-area:featured_ct;
+padding:0.15rem;
+}
+
+
+blockquote p::before{content:'\201C'}
+blockquote p::after{content:'\201D'}
+
+#cards_section{
+  grid-area:thumbnail;
+  display:flex;
+  flex-direction:column;
+  justify-content:space-around;
+  align-items:center;
+	}
+
+
+ .card{
+  width:80%;
+  height:24rem;
+   margin:1rem;
+   padding:0.5rem;
+  border:1px solid #797979;
+   background-size:cover;
+   display:flex;
+   flex-direction:column;
+   border-radius:7px;
+   background: rgb(255,255,250);
+   background: linear-gradient(45deg, rgba(255,255,250,0.7) 0%, rgba(242,242,237,0.7) 55%, rgba(227,227,223,0.6982143199076505) 100%);
+	}
+
+.card>.img_section{
+	height:75%;
+}
+
+.card>.txt_section{
+	font-family:Arial, sans-serif;
+  font-size:smaller;
+}
+
+
+#post1 .img_section{
+  background-image:url('../img/waterdrop.jpg');
+  background-position:45% 83%;
+}
+
+
+#post2 .img_section{
+background-image:url('../img/wave.jpg');
+background-position:50% 70%;
+}
+
+#post3 .img_section{
+  background-image:url('../img/waterfall.jpg');
+  background-position:60% 70%;
+  }
+
+  #post4 .img_section{
+    background-image:url('../img/indian-ocean.jpg');
+    background-position:40% 70%;
+    }
+
+    @media(min-width:900px){
+        .content{
+          grid-template-rows: 200px 1fr;
+        }
+        
+        #cards_section{
+          flex-direction:row;
+          justify-content:space-around;
+          }
+
+        .card{
+          width:23%;
+          height:50vh;
+           margin:1rem;
+           padding:0.5rem;
+           flex-direction:column;
+          }
+      }
