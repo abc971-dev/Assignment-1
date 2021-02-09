@@ -11,11 +11,11 @@
     grid-gap:15px;
 }
 
-.header{
+header{
     grid-area:hd;
   }
 
-  .sidebar{
+  nav{
     grid-area: sd;
     display:flex;
     flex-direction:row;
@@ -36,7 +36,7 @@
     grid-gap:10px;
   }
 
-  .footer{
+  footer{
     grid-area: ft;
     display:grid;
     grid-template-rows:40px;
@@ -72,13 +72,13 @@
             grid-template-rows: 150px 1fr 80px;
         }
       
-          .sidebar{
+         nav{
             flex-direction:column;
             justify-content:flex-start;
             align-items:flex-start;
           }
 
-          .footer{
+          footer{
             grid-template-columns: 350px 1fr;
             grid-template-rows:40px;
             grid-template-areas:"social credits";

@@ -1,49 +1,28 @@
-/*This stylesheet contains the baseline styling (fonts, colors, backgrounds) for both pages*/
-
-@import url('https://fonts.googleapis.com/css2?family=Roboto&family=Source+Sans+Pro:wght@600&display=swap'); /*Google fonts import*/
-
-body{
-    font-family:'Roboto', sans-serif;
-    font-size:14px;
-}
-
-h1{
-  font-size:1.8rem;
-}
-
-h2{
-  font-size:1.5rem;
-}
-
-h3{
-  font-size:1.1rem;
-}
-
+/*This stylesheet contains the baseline colours and backgrounds for both pages*/
 
 .container{
   background: rgb(255,255,250);
 background: linear-gradient(159deg, rgba(255,255,250,0.7) 0%, rgba(71,168,201,1) 42%, rgba(54,151,184,0.7) 75%, rgba(6,71,172,0.5) 96%);
 }
 
-
-h1,h2,h3{
-    font-family: 'Source Sans Pro', sans-serif;
-}
-
-.header{ 
+header{ 
     background: url('../img/water_bubbles.jpg');
     background-size:cover;
     background-position:0% 43%;
     padding:0.25rem;
 }
-.header a, .thumbnail>.txt_section a, .sidebar_links a{text-decoration:none;}
-.header a:hover,.thumbnail>.txt_section a:hover, .sidebar_links a:hover{text-decoration:underline;}
+header a, .thumbnail>.txt_section a, .sidebar_links a{text-decoration:none;}
+header a:hover,.thumbnail>.txt_section a:hover, .sidebar_links a:hover{text-decoration:underline;}
 
-.header a:visited{color:#ffffff;}
+header a:visited{color:#ffffff;}
 
-.header h2{font-style:italic;color:#ffffaa;}
+header h2{font-style:italic;color:#ffffaa;}
 
-.header a:hover{content:icon('fa-home');}
+header a:hover{content:icon('fa-home');}
+.sidebar_links ul, li{
+  list-style-type: none;
+}
+
 .sidebar_links a::before{
     content:'\1F30A';
   }
